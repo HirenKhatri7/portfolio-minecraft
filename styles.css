@@ -54,7 +54,6 @@ button{
     grid-template-rows: auto auto; 
     padding: 10px 10px;
     gap: 4px;
-    font-size: 10px;
     box-shadow: inset 2px 2px #ffffff, 5px 5px #595959;
     border-radius: 2px;
     text-align: center;
@@ -62,10 +61,11 @@ button{
 
 .progress-bar{
     width:400px;
-    height:100px;
+    height:fit-content;
     border: 2px solid #394354;
     margin-top:10px;
     padding: 8px 8px;
+    padding-bottom: 12px;
     color: white;
     background-color: rgba(100, 100, 100, 0.7);
 }
@@ -83,6 +83,7 @@ button{
     background:#9CDA69;
     display: grid;
     grid-template-columns: repeat(38,10px);
+
 }
 
 /* Main UI */
@@ -104,16 +105,16 @@ button{
     justify-content: center;
 }
 .outer-border{
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
     border: 1.3px solid black;
     justify-content: center;
     align-items: center;
     display: grid;
 }
 .item{
-    height: 26px;
-    width: 26px;
+    height: 44px;
+    width: 44px;
     background-color: rgba(100, 100, 100, 0.3);
     border: 3px solid #999999;
     display: flex;
@@ -129,7 +130,7 @@ button{
     gap: 4px;
     font-size: 10px;
     box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
-        border-radius: 4px;
+    border-radius: 4px;
     border: 2px solid #595959;
 }
 .row-1{
@@ -151,7 +152,7 @@ button{
 .hero{
     background-color: black;
     height: 100%;
-    width: 70px;
+    width: 110px;
 }
 
 .shield{
@@ -171,7 +172,7 @@ button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0px;
-    grid-auto-rows: 32px;
+    grid-auto-rows: 50px;
 }
 .right-right{
     display: grid;
@@ -182,7 +183,7 @@ button{
 .middle{
     margin-top: 5px;
     display: grid;
-    grid-template-columns: repeat(9,32px);
+    grid-template-columns: repeat(9,50px);
     gap: 0px;
 }
 
@@ -190,7 +191,7 @@ button{
     margin-top: 5px;
     display: grid;
     justify-content: start;
-    grid-template-columns: repeat(9,32px);
+    grid-template-columns: repeat(9,50px);
 }
 .active-card{
     width: 100%;
@@ -202,47 +203,46 @@ button{
 .about-section{
     display: none;
     background-color: #8B8B8B;
-    width: 400px;
+    width: 600px;
     grid-template-rows: auto auto; 
     padding: 10px 10px;
     gap: 4px;
     font-size: 10px;
     box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
-        border-radius: 4px;
+    border-radius: 4px;
     border: 2px solid #595959;
 }
 
 .player-info{
     background-color: #616161;
-    padding: 10px 10px;
-    
+    padding: 12px 12px;
 }
 
 .about-info{
     background-color: #616161;
-    padding: 10px 10px;
+    padding: 12px 12px;
 }
 .about-skills{
     background-color: #616161;
-    padding: 10px 10px;
+    padding: 12px 12px;
 }
 
 .title{
     color: #FDC700;
-    font-size: small;
-    margin-bottom: 4px;
+    font-size: x-large;
+    margin-bottom: 8px;
 }
 .details {
     color: white;
     line-height: 2;
-    font-size: 10px;
+    font-size: small;
 }
 .skill-details{
     color: white;
     display: grid;
     grid-template-columns: repeat(2,auto);
     line-height: 2;
-    
+    font-size: small;
 }
 .skill{
     display: flex;
@@ -263,11 +263,11 @@ pre{
 .project-section{
     display: none;
     background-color: #8B8B8B;
-    width: 400px;
+    width: 600px;
     grid-template-rows: auto auto; 
     padding: 10px 10px;
     gap: 4px;
-    font-size: 10px;
+    font-size: small;
     box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
     border-radius: 4px;
     border: 2px solid #595959;
@@ -275,18 +275,18 @@ pre{
 .project{
     background-color: #616161;
     border: 1.5px solid #394354;
-    padding: 8px 8px;
+    padding: 12px 12px;
 }
 .project-title{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 }
 
 .progress{
     color: white;
-    padding: 4px 4px;
-    font-size: 6px;
+    padding: 6px 6px;
+    font-size: x-small;
 }
 
 .completed{
@@ -296,14 +296,11 @@ pre{
 .in-progress{
     background-color: #F54900;
 }
-.project-description .details{
-    font-size: 8px;
-    line-height: 2;
-}
+
 
 .project-description .technology{
     color: #8CBFF6;
-    font-size: 8px;
+    font-size: x-small;
     line-height: 2;
 }
 
@@ -319,20 +316,20 @@ a {
 .education-section{
     display: none;
     background-color: #8B8B8B;
-    width: 400px;
+    width: 600px;
     grid-template-rows: auto auto; 
     padding: 10px 10px;
     gap: 4px;
     font-size: 10px;
     box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
-        border-radius: 4px;
+    border-radius: 4px;
     border: 2px solid #595959;
 }
 
 .education{
     background-color: #616161;
     border: 1.5px solid #394354;
-    padding: 8px 8px;
+    padding: 12px 12px;
 }
 
 .degree-container{
@@ -342,22 +339,22 @@ a {
 
 .degree{
     color: #FDC700;
-    font-size: small;
+    font-size: x-large;
     margin-bottom: 4px; 
 }
 .specialization{
     color:#7BF1A8;
-    font-size: 9px;
+    font-size: large;
     margin-bottom: 4px;
 }
 .college{
     color:white;
-    font-size: 9px;
+    font-size: small;
     margin-bottom: 4px;
 }
 .timeline{
     color:#99A1AF;
-    font-size: 8px;
+    font-size: x-small;
     margin-bottom: 4px;
 }
 
@@ -368,6 +365,7 @@ a {
 
 .achievement-title{
     color:#8EC5FF;
+    font-size: large;
 }
 .achievement{
     display: flex;
@@ -375,7 +373,7 @@ a {
     justify-content: start;
     gap: 4px;
     color: white;
-    font-size: 9px;
+    font-size: small;
 }
 .achievement .dot{
     background-color: #0CD671;
@@ -386,13 +384,12 @@ a {
 .contact-section{
     display: none;
     background-color: #8B8B8B;
-    width: 400px;
+    width: 600px;
     grid-template-rows: auto auto; 
     padding: 10px 10px;
     gap: 4px;
-    font-size: 10px;
     box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
-        border-radius: 4px;
+    border-radius: 4px;
     border: 2px solid #595959;
 }
 
@@ -405,7 +402,7 @@ a {
 }
 .contact-header .description{
     color: white;
-    font-size: 9px;
+    font-size: small;
 }
 
 .contact-tile{
@@ -413,19 +410,20 @@ a {
     border: 2px solid #4A5565;
     padding: 8px 8px;
     line-height: 1.5;
+    font-size: small;
 }
 
 .platform{
     color: #FDC700;
+    margin-bottom: 8px;
 }
 .url{
     color: white;
-    font-size: 9px;
 }
 
 img {
-    width: 26px;
-    height: 26epx;
+    width: 44px;
+    height: 44px;
 }
 
 .hero img{
@@ -450,7 +448,7 @@ img {
     padding: 4px 6px;
 
     font-family: 'Press Start 2P', monospace;
-    font-size: 10px;
+    font-size: small;
 
     pointer-events: none;
 
