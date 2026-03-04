@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    background-image: url("/assets/minecraft_background.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+#start-screen{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.menu{
+    text-align:center;
+}
+
+.menu .title{
+    font-size:60px;
+    color:white;
+    text-shadow:4px 4px black;
+}
+
+button{
+    padding:15px 40px;
+    font-size:18px;
+    background:#6b8e23;
+    border:4px solid black;
+    cursor:pointer;
+}
+
+/* Loading Screen */
+
+#loading-screen{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    
+}
+.loader{
+    background-color: #E0E0E0;
+    width: fit-content;
+    grid-template-rows: auto auto; 
+    padding: 10px 10px;
+    gap: 4px;
+    font-size: 10px;
+    box-shadow: inset 2px 2px #ffffff, 5px 5px #595959;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.progress-bar{
+    width:400px;
+    height:100px;
+    border: 2px solid #394354;
+    margin-top:10px;
+    padding: 8px 8px;
+    color: white;
+    background-color: rgba(100, 100, 100, 0.7);
+}
+.progress-cell{
+    width: 10px;
+    height: 4px;
+    background-color: #537e50;
+    border: 0.3px solid black;
+    grid-row: 1;
+}
+#progress{
+    margin-top: 45px;
+    height:fit-content;
+    width: fit-content;
+    background:#9CDA69;
+    display: grid;
+    grid-template-columns: repeat(38,10px);
+}
+
+/* Main UI */
+
+#game-ui{
+    display:none;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.quick-look{
+    display: grid;
+    padding: 2px 2px;
+    justify-content: center;
+}
+.outer-border{
+    height: 32px;
+    width: 32px;
+    border: 1.3px solid black;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+.item{
+    height: 26px;
+    width: 26px;
+    background-color: rgba(100, 100, 100, 0.3);
+    border: 3px solid #999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inventory{
+    display: none;
+    background-color: #E0E0E0;
+    width: fit-content;
+    grid-template-rows: auto auto; 
+    padding: 10px 10px;
+    gap: 4px;
+    font-size: 10px;
+    box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
+        border-radius: 4px;
+    border: 2px solid #595959;
+}
+.row-1{
+    grid-row: 1;
+}
+
+.col-1{
+    grid-column: 1;
+}
+
+.armour{
+    display: grid;
+}
+.left{
+    display: grid;
+    justify-content: start;
+    gap: 2px;
+}
+.hero{
+    background-color: black;
+    height: 100%;
+    width: 70px;
+}
+
+.shield{
+    display: grid;
+    align-items: end;
+}
+.upper{
+    display: grid;
+    justify-content: start;
+    gap: 8px;
+}
+.right{
+    display: grid;
+    gap: 15px;
+}
+.right-left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    grid-auto-rows: 32px;
+}
+.right-right{
+    display: grid;
+    align-items: start;
+    padding-top: 13px;
+}
+
+.middle{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(9,32px);
+    gap: 0px;
+}
+
+.lower{
+    margin-top: 5px;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(9,32px);
+}
+.active-card{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.about-section{
+    display: none;
+    background-color: #8B8B8B;
+    width: 400px;
+    grid-template-rows: auto auto; 
+    padding: 10px 10px;
+    gap: 4px;
+    font-size: 10px;
+    box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
+        border-radius: 4px;
+    border: 2px solid #595959;
+}
+
+.player-info{
+    background-color: #616161;
+    padding: 10px 10px;
+    
+}
+
+.about-info{
+    background-color: #616161;
+    padding: 10px 10px;
+}
+.about-skills{
+    background-color: #616161;
+    padding: 10px 10px;
+}
+
+.title{
+    color: #FDC700;
+    font-size: small;
+    margin-bottom: 4px;
+}
+.details {
+    color: white;
+    line-height: 2;
+    font-size: 10px;
+}
+.skill-details{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    line-height: 2;
+    
+}
+.skill{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.skill .dot{
+    background-color: #0CD671;
+    height: 5px;
+    width: 5px;
+}
+pre{
+    font-family: inherit;
+    margin: 2px;
+}
+
+
+.project-section{
+    display: none;
+    background-color: #8B8B8B;
+    width: 400px;
+    grid-template-rows: auto auto; 
+    padding: 10px 10px;
+    gap: 4px;
+    font-size: 10px;
+    box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
+    border-radius: 4px;
+    border: 2px solid #595959;
+}
+.project{
+    background-color: #616161;
+    border: 1.5px solid #394354;
+    padding: 8px 8px;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress{
+    color: white;
+    padding: 4px 4px;
+    font-size: 6px;
+}
+
+.completed{
+    background-color: #00A63E;
+}
+
+.in-progress{
+    background-color: #F54900;
+}
+.project-description .details{
+    font-size: 8px;
+    line-height: 2;
+}
+
+.project-description .technology{
+    color: #8CBFF6;
+    font-size: 8px;
+    line-height: 2;
+}
+
+.project:hover{
+    border-color: oklch(68.1% 0.162 75.834);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.education-section{
+    display: none;
+    background-color: #8B8B8B;
+    width: 400px;
+    grid-template-rows: auto auto; 
+    padding: 10px 10px;
+    gap: 4px;
+    font-size: 10px;
+    box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
+        border-radius: 4px;
+    border: 2px solid #595959;
+}
+
+.education{
+    background-color: #616161;
+    border: 1.5px solid #394354;
+    padding: 8px 8px;
+}
+
+.degree-container{
+    border-bottom: 1px solid #4A5565;
+    line-height: 2;
+}
+
+.degree{
+    color: #FDC700;
+    font-size: small;
+    margin-bottom: 4px; 
+}
+.specialization{
+    color:#7BF1A8;
+    font-size: 9px;
+    margin-bottom: 4px;
+}
+.college{
+    color:white;
+    font-size: 9px;
+    margin-bottom: 4px;
+}
+.timeline{
+    color:#99A1AF;
+    font-size: 8px;
+    margin-bottom: 4px;
+}
+
+.achievement-container{
+    padding: 6px 2px;
+    line-height: 2;
+}
+
+.achievement-title{
+    color:#8EC5FF;
+}
+.achievement{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 4px;
+    color: white;
+    font-size: 9px;
+}
+.achievement .dot{
+    background-color: #0CD671;
+    height: 4px;
+    width: 4px;
+}
+
+.contact-section{
+    display: none;
+    background-color: #8B8B8B;
+    width: 400px;
+    grid-template-rows: auto auto; 
+    padding: 10px 10px;
+    gap: 4px;
+    font-size: 10px;
+    box-shadow: inset 2px 2px #ffffff, 2px 2px #595959;
+        border-radius: 4px;
+    border: 2px solid #595959;
+}
+
+.contact-header{
+    background-color: #616161;
+    border: 2px solid #4A5565;
+    padding: 8px 8px;
+    text-align: center;
+    line-height: 2;
+}
+.contact-header .description{
+    color: white;
+    font-size: 9px;
+}
+
+.contact-tile{
+    background-color: #616161;
+    border: 2px solid #4A5565;
+    padding: 8px 8px;
+    line-height: 1.5;
+}
+
+.platform{
+    color: #FDC700;
+}
+.url{
+    color: white;
+    font-size: 9px;
+}
+
+img {
+    width: 26px;
+    height: 26epx;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    display: none;
+    z-index: 5;
+}
+#tooltip{
+    position: fixed;
+    background: #100010;
+    color: white;
+
+    border: 2px solid #707070;
+    padding: 4px 6px;
+
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+
+    pointer-events: none;
+
+    opacity: 0;
+    transition: opacity 0.1s;
+
+    z-index: 1000;
+}
+
+.about-section,
+.project-section,
+.education-section,
+.contact-section,
+.inventory{
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+}
